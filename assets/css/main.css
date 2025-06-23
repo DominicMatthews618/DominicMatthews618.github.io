@@ -4687,3 +4687,114 @@ input, select, textarea {
 		}
 
 	}
+
+	/* Full-width section with black background */
+#other-projects {
+  background-color: #1e252d;
+  padding: 6rem 0; /* Adds black space above and below */
+  width: 100vw; /* Forces section to span full viewport width */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* Container inside the full-width section */
+.full-width-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* Section title text */
+#other-projects h2,
+#other-projects p {
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Responsive project link layout */
+#other-projects .posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.project-link-box {
+  flex: 1 1 300px;
+  max-width: 300px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.project-link-box a {
+  color: #007acc;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Hover effect for project cards */
+.project-link-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-link-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Optional: animate link underline on hover */
+.project-link-box a {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-link-box a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #007acc;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.project-link-box a:hover::after {
+  transform: scaleX(1);
+}
+
+.project-icons {
+  margin-top: 1rem;
+}
+
+.project-icons img {
+  width: 28px;
+  height: 28px;
+  margin: 0 0.3rem;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+.project-icons img:hover {
+  transform: scale(1.2);
+}
+
+.post.featured .image.main img {
+  max-height: 600px;  /* adjust to your preferred height */
+  width: auto;        /* maintain aspect ratio */
+  display: block;
+  margin: 0 auto;     /* center horizontally */
+  object-fit: cover;  /* crop if needed */
+  border-radius: 10px;
+}
