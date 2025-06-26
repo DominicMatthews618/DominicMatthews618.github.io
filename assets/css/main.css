@@ -4791,10 +4791,23 @@ input, select, textarea {
 }
 
 .post.featured .image.main img {
-  max-height: 600px;  /* adjust to your preferred height */
+  max-height: 400px;  /* adjust to your preferred height */
   width: auto;        /* maintain aspect ratio */
   display: block;
   margin: 0 auto;     /* center horizontally */
   object-fit: cover;  /* crop if needed */
   border-radius: 10px;
 }
+
+.read-more-content {
+  display: none;
+}
+
+.read-more-toggle {
+  color: #1e90ff;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+
